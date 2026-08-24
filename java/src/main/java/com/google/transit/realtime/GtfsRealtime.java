@@ -19184,53 +19184,166 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
-    java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> 
+    @java.lang.Deprecated java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> 
         getActivePeriodList();
     /**
      * <pre>
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
-    com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index);
+    @java.lang.Deprecated com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index);
     /**
      * <pre>
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
-    int getActivePeriodCount();
+    @java.lang.Deprecated int getActivePeriodCount();
     /**
      * <pre>
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
-    java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
         getActivePeriodOrBuilderList();
     /**
      * <pre>
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
-    com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
+    @java.lang.Deprecated com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> 
+        getCommunicationPeriodList();
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    com.google.transit.realtime.GtfsRealtime.TimeRange getCommunicationPeriod(int index);
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    int getCommunicationPeriodCount();
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+        getCommunicationPeriodOrBuilderList();
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getCommunicationPeriodOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> 
+        getImpactPeriodList();
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    com.google.transit.realtime.GtfsRealtime.TimeRange getImpactPeriod(int index);
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    int getImpactPeriodCount();
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+        getImpactPeriodOrBuilderList();
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getImpactPeriodOrBuilder(
         int index);
 
     /**
@@ -19452,7 +19565,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -19463,7 +19575,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -19474,7 +19585,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -19485,7 +19595,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -19496,7 +19605,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -19507,7 +19615,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -19602,6 +19709,8 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
     }
     private Alert() {
       activePeriod_ = java.util.Collections.emptyList();
+      communicationPeriod_ = java.util.Collections.emptyList();
+      impactPeriod_ = java.util.Collections.emptyList();
       informedEntity_ = java.util.Collections.emptyList();
       cause_ = 1;
       effect_ = 8;
@@ -20204,12 +20313,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getActivePeriodList() {
+    @java.lang.Deprecated public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getActivePeriodList() {
       return activePeriod_;
     }
     /**
@@ -20217,12 +20327,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
         getActivePeriodOrBuilderList() {
       return activePeriod_;
     }
@@ -20231,12 +20342,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public int getActivePeriodCount() {
+    @java.lang.Deprecated public int getActivePeriodCount() {
       return activePeriod_.size();
     }
     /**
@@ -20244,12 +20356,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index) {
+    @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index) {
       return activePeriod_.get(index);
     }
     /**
@@ -20257,14 +20370,157 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * Time when the alert should be shown to the user. If missing, the
      * alert will be shown as long as it appears in the feed.
      * If multiple ranges are given, the alert will be shown during all of them.
+     * Should not be used - for backwards-compatibility only.
      * </pre>
      *
-     * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+     * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
+    @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
         int index) {
       return activePeriod_.get(index);
+    }
+
+    public static final int COMMUNICATION_PERIOD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> communicationPeriod_;
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getCommunicationPeriodList() {
+      return communicationPeriod_;
+    }
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+        getCommunicationPeriodOrBuilderList() {
+      return communicationPeriod_;
+    }
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    @java.lang.Override
+    public int getCommunicationPeriodCount() {
+      return communicationPeriod_.size();
+    }
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.transit.realtime.GtfsRealtime.TimeRange getCommunicationPeriod(int index) {
+      return communicationPeriod_.get(index);
+    }
+    /**
+     * <pre>
+     * Time when the alert should be shown to the user strictly for informative reasons.
+     * If missing, the consuming application can decide when it's appropriate to be shown.
+     * If multiple ranges are given, the alert will be shown during all of them.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getCommunicationPeriodOrBuilder(
+        int index) {
+      return communicationPeriod_.get(index);
+    }
+
+    public static final int IMPACT_PERIOD_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> impactPeriod_;
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getImpactPeriodList() {
+      return impactPeriod_;
+    }
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+        getImpactPeriodOrBuilderList() {
+      return impactPeriod_;
+    }
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    @java.lang.Override
+    public int getImpactPeriodCount() {
+      return impactPeriod_.size();
+    }
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.transit.realtime.GtfsRealtime.TimeRange getImpactPeriod(int index) {
+      return impactPeriod_.get(index);
+    }
+    /**
+     * <pre>
+     * Time when the services are affected by the alert. If communication_period is specified,
+     * every time interval in impact_period must be fully contained within at least
+     * one time interval of communication_period.
+     * </pre>
+     *
+     * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getImpactPeriodOrBuilder(
+        int index) {
+      return impactPeriod_.get(index);
     }
 
     public static final int INFORMED_ENTITY_FIELD_NUMBER = 5;
@@ -20581,7 +20837,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -20595,7 +20850,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -20609,7 +20863,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
      * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -20625,7 +20878,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -20639,7 +20891,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -20653,7 +20904,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * <pre>
      * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
      * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -20758,6 +21008,18 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           return false;
         }
       }
+      for (int i = 0; i < getCommunicationPeriodCount(); i++) {
+        if (!getCommunicationPeriod(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getImpactPeriodCount(); i++) {
+        if (!getImpactPeriod(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       for (int i = 0; i < getInformedEntityCount(); i++) {
         if (!getInformedEntity(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -20835,6 +21097,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       for (int i = 0; i < activePeriod_.size(); i++) {
         output.writeMessage(1, activePeriod_.get(i));
       }
+      for (int i = 0; i < communicationPeriod_.size(); i++) {
+        output.writeMessage(2, communicationPeriod_.get(i));
+      }
+      for (int i = 0; i < impactPeriod_.size(); i++) {
+        output.writeMessage(3, impactPeriod_.get(i));
+      }
       for (int i = 0; i < informedEntity_.size(); i++) {
         output.writeMessage(5, informedEntity_.get(i));
       }
@@ -20890,6 +21158,24 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
             for (int i = 0; i < count; i++) {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSizeNoTag(activePeriod_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = communicationPeriod_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(communicationPeriod_.get(i));
+            }
+            size += 1 * count;
+          }
+
+          {
+            final int count = impactPeriod_.size();
+            for (int i = 0; i < count; i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSizeNoTag(impactPeriod_.get(i));
             }
             size += 1 * count;
           }
@@ -20968,6 +21254,10 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
 
       if (!getActivePeriodList()
           .equals(other.getActivePeriodList())) return false;
+      if (!getCommunicationPeriodList()
+          .equals(other.getCommunicationPeriodList())) return false;
+      if (!getImpactPeriodList()
+          .equals(other.getImpactPeriodList())) return false;
       if (!getInformedEntityList()
           .equals(other.getInformedEntityList())) return false;
       if (hasCause() != other.hasCause()) return false;
@@ -21043,6 +21333,14 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       if (getActivePeriodCount() > 0) {
         hash = (37 * hash) + ACTIVE_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getActivePeriodList().hashCode();
+      }
+      if (getCommunicationPeriodCount() > 0) {
+        hash = (37 * hash) + COMMUNICATION_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationPeriodList().hashCode();
+      }
+      if (getImpactPeriodCount() > 0) {
+        hash = (37 * hash) + IMPACT_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getImpactPeriodList().hashCode();
       }
       if (getInformedEntityCount() > 0) {
         hash = (37 * hash) + INFORMED_ENTITY_FIELD_NUMBER;
@@ -21233,6 +21531,8 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           internalGetActivePeriodFieldBuilder();
+          internalGetCommunicationPeriodFieldBuilder();
+          internalGetImpactPeriodFieldBuilder();
           internalGetInformedEntityFieldBuilder();
           internalGetUrlFieldBuilder();
           internalGetHeaderTextFieldBuilder();
@@ -21256,13 +21556,27 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           activePeriodBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (communicationPeriodBuilder_ == null) {
+          communicationPeriod_ = java.util.Collections.emptyList();
+        } else {
+          communicationPeriod_ = null;
+          communicationPeriodBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (impactPeriodBuilder_ == null) {
+          impactPeriod_ = java.util.Collections.emptyList();
+        } else {
+          impactPeriod_ = null;
+          impactPeriodBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (informedEntityBuilder_ == null) {
           informedEntity_ = java.util.Collections.emptyList();
         } else {
           informedEntity_ = null;
           informedEntityBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         cause_ = 1;
         effect_ = 8;
         url_ = null;
@@ -21353,10 +21667,28 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           result.activePeriod_ = activePeriodBuilder_.build();
         }
-        if (informedEntityBuilder_ == null) {
+        if (communicationPeriodBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
-            informedEntity_ = java.util.Collections.unmodifiableList(informedEntity_);
+            communicationPeriod_ = java.util.Collections.unmodifiableList(communicationPeriod_);
             bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.communicationPeriod_ = communicationPeriod_;
+        } else {
+          result.communicationPeriod_ = communicationPeriodBuilder_.build();
+        }
+        if (impactPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            impactPeriod_ = java.util.Collections.unmodifiableList(impactPeriod_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.impactPeriod_ = impactPeriod_;
+        } else {
+          result.impactPeriod_ = impactPeriodBuilder_.build();
+        }
+        if (informedEntityBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            informedEntity_ = java.util.Collections.unmodifiableList(informedEntity_);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.informedEntity_ = informedEntity_;
         } else {
@@ -21367,67 +21699,67 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       private void buildPartial0(com.google.transit.realtime.GtfsRealtime.Alert result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.cause_ = cause_;
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.effect_ = effect_;
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.url_ = urlBuilder_ == null
               ? url_
               : urlBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.headerText_ = headerTextBuilder_ == null
               ? headerText_
               : headerTextBuilder_.build();
           to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.descriptionText_ = descriptionTextBuilder_ == null
               ? descriptionText_
               : descriptionTextBuilder_.build();
           to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.ttsHeaderText_ = ttsHeaderTextBuilder_ == null
               ? ttsHeaderText_
               : ttsHeaderTextBuilder_.build();
           to_bitField0_ |= 0x00000020;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.ttsDescriptionText_ = ttsDescriptionTextBuilder_ == null
               ? ttsDescriptionText_
               : ttsDescriptionTextBuilder_.build();
           to_bitField0_ |= 0x00000040;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.severityLevel_ = severityLevel_;
           to_bitField0_ |= 0x00000080;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.image_ = imageBuilder_ == null
               ? image_
               : imageBuilder_.build();
           to_bitField0_ |= 0x00000100;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.imageAlternativeText_ = imageAlternativeTextBuilder_ == null
               ? imageAlternativeText_
               : imageAlternativeTextBuilder_.build();
           to_bitField0_ |= 0x00000200;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.causeDetail_ = causeDetailBuilder_ == null
               ? causeDetail_
               : causeDetailBuilder_.build();
           to_bitField0_ |= 0x00000400;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.effectDetail_ = effectDetailBuilder_ == null
               ? effectDetail_
               : effectDetailBuilder_.build();
@@ -21497,11 +21829,63 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
             }
           }
         }
+        if (communicationPeriodBuilder_ == null) {
+          if (!other.communicationPeriod_.isEmpty()) {
+            if (communicationPeriod_.isEmpty()) {
+              communicationPeriod_ = other.communicationPeriod_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCommunicationPeriodIsMutable();
+              communicationPeriod_.addAll(other.communicationPeriod_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.communicationPeriod_.isEmpty()) {
+            if (communicationPeriodBuilder_.isEmpty()) {
+              communicationPeriodBuilder_.dispose();
+              communicationPeriodBuilder_ = null;
+              communicationPeriod_ = other.communicationPeriod_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              communicationPeriodBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetCommunicationPeriodFieldBuilder() : null;
+            } else {
+              communicationPeriodBuilder_.addAllMessages(other.communicationPeriod_);
+            }
+          }
+        }
+        if (impactPeriodBuilder_ == null) {
+          if (!other.impactPeriod_.isEmpty()) {
+            if (impactPeriod_.isEmpty()) {
+              impactPeriod_ = other.impactPeriod_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureImpactPeriodIsMutable();
+              impactPeriod_.addAll(other.impactPeriod_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.impactPeriod_.isEmpty()) {
+            if (impactPeriodBuilder_.isEmpty()) {
+              impactPeriodBuilder_.dispose();
+              impactPeriodBuilder_ = null;
+              impactPeriod_ = other.impactPeriod_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              impactPeriodBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   internalGetImpactPeriodFieldBuilder() : null;
+            } else {
+              impactPeriodBuilder_.addAllMessages(other.impactPeriod_);
+            }
+          }
+        }
         if (informedEntityBuilder_ == null) {
           if (!other.informedEntity_.isEmpty()) {
             if (informedEntity_.isEmpty()) {
               informedEntity_ = other.informedEntity_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureInformedEntityIsMutable();
               informedEntity_.addAll(other.informedEntity_);
@@ -21514,7 +21898,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
               informedEntityBuilder_.dispose();
               informedEntityBuilder_ = null;
               informedEntity_ = other.informedEntity_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
               informedEntityBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    internalGetInformedEntityFieldBuilder() : null;
@@ -21569,6 +21953,16 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       public final boolean isInitialized() {
         for (int i = 0; i < getActivePeriodCount(); i++) {
           if (!getActivePeriod(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getCommunicationPeriodCount(); i++) {
+          if (!getCommunicationPeriod(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getImpactPeriodCount(); i++) {
+          if (!getImpactPeriod(i).isInitialized()) {
             return false;
           }
         }
@@ -21657,6 +22051,32 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                 }
                 break;
               } // case 10
+              case 18: {
+                com.google.transit.realtime.GtfsRealtime.TimeRange m =
+                    input.readMessage(
+                        com.google.transit.realtime.GtfsRealtime.TimeRange.parser(),
+                        extensionRegistry);
+                if (communicationPeriodBuilder_ == null) {
+                  ensureCommunicationPeriodIsMutable();
+                  communicationPeriod_.add(m);
+                } else {
+                  communicationPeriodBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.google.transit.realtime.GtfsRealtime.TimeRange m =
+                    input.readMessage(
+                        com.google.transit.realtime.GtfsRealtime.TimeRange.parser(),
+                        extensionRegistry);
+                if (impactPeriodBuilder_ == null) {
+                  ensureImpactPeriodIsMutable();
+                  impactPeriod_.add(m);
+                } else {
+                  impactPeriodBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
               case 42: {
                 com.google.transit.realtime.GtfsRealtime.EntitySelector m =
                     input.readMessage(
@@ -21678,7 +22098,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                   mergeUnknownVarintField(6, tmpRaw);
                 } else {
                   cause_ = tmpRaw;
-                  bitField0_ |= 0x00000004;
+                  bitField0_ |= 0x00000010;
                 }
                 break;
               } // case 48
@@ -21690,7 +22110,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                   mergeUnknownVarintField(7, tmpRaw);
                 } else {
                   effect_ = tmpRaw;
-                  bitField0_ |= 0x00000008;
+                  bitField0_ |= 0x00000020;
                 }
                 break;
               } // case 56
@@ -21698,35 +22118,35 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                 input.readMessage(
                     internalGetUrlFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000040;
                 break;
               } // case 66
               case 82: {
                 input.readMessage(
                     internalGetHeaderTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000080;
                 break;
               } // case 82
               case 90: {
                 input.readMessage(
                     internalGetDescriptionTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000100;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     internalGetTtsHeaderTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 98
               case 106: {
                 input.readMessage(
                     internalGetTtsDescriptionTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 106
               case 112: {
@@ -21737,7 +22157,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                   mergeUnknownVarintField(14, tmpRaw);
                 } else {
                   severityLevel_ = tmpRaw;
-                  bitField0_ |= 0x00000200;
+                  bitField0_ |= 0x00000800;
                 }
                 break;
               } // case 112
@@ -21745,28 +22165,28 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
                 input.readMessage(
                     internalGetImageFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000400;
+                bitField0_ |= 0x00001000;
                 break;
               } // case 122
               case 130: {
                 input.readMessage(
                     internalGetImageAlternativeTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00002000;
                 break;
               } // case 130
               case 138: {
                 input.readMessage(
                     internalGetCauseDetailFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00004000;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     internalGetEffectDetailFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00008000;
                 break;
               } // case 146
               default: {
@@ -21803,11 +22223,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getActivePeriodList() {
+      @java.lang.Deprecated public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getActivePeriodList() {
         if (activePeriodBuilder_ == null) {
           return java.util.Collections.unmodifiableList(activePeriod_);
         } else {
@@ -21819,11 +22240,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public int getActivePeriodCount() {
+      @java.lang.Deprecated public int getActivePeriodCount() {
         if (activePeriodBuilder_ == null) {
           return activePeriod_.size();
         } else {
@@ -21835,11 +22257,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index) {
+      @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRange getActivePeriod(int index) {
         if (activePeriodBuilder_ == null) {
           return activePeriod_.get(index);
         } else {
@@ -21851,11 +22274,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder setActivePeriod(
+      @java.lang.Deprecated public Builder setActivePeriod(
           int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
         if (activePeriodBuilder_ == null) {
           if (value == null) {
@@ -21874,11 +22298,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder setActivePeriod(
+      @java.lang.Deprecated public Builder setActivePeriod(
           int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
         if (activePeriodBuilder_ == null) {
           ensureActivePeriodIsMutable();
@@ -21894,11 +22319,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder addActivePeriod(com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+      @java.lang.Deprecated public Builder addActivePeriod(com.google.transit.realtime.GtfsRealtime.TimeRange value) {
         if (activePeriodBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21916,11 +22342,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder addActivePeriod(
+      @java.lang.Deprecated public Builder addActivePeriod(
           int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
         if (activePeriodBuilder_ == null) {
           if (value == null) {
@@ -21939,11 +22366,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder addActivePeriod(
+      @java.lang.Deprecated public Builder addActivePeriod(
           com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
         if (activePeriodBuilder_ == null) {
           ensureActivePeriodIsMutable();
@@ -21959,11 +22387,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder addActivePeriod(
+      @java.lang.Deprecated public Builder addActivePeriod(
           int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
         if (activePeriodBuilder_ == null) {
           ensureActivePeriodIsMutable();
@@ -21979,11 +22408,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder addAllActivePeriod(
+      @java.lang.Deprecated public Builder addAllActivePeriod(
           java.lang.Iterable<? extends com.google.transit.realtime.GtfsRealtime.TimeRange> values) {
         if (activePeriodBuilder_ == null) {
           ensureActivePeriodIsMutable();
@@ -22000,11 +22430,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder clearActivePeriod() {
+      @java.lang.Deprecated public Builder clearActivePeriod() {
         if (activePeriodBuilder_ == null) {
           activePeriod_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -22019,11 +22450,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public Builder removeActivePeriod(int index) {
+      @java.lang.Deprecated public Builder removeActivePeriod(int index) {
         if (activePeriodBuilder_ == null) {
           ensureActivePeriodIsMutable();
           activePeriod_.remove(index);
@@ -22038,11 +22470,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder getActivePeriodBuilder(
+      @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder getActivePeriodBuilder(
           int index) {
         return internalGetActivePeriodFieldBuilder().getBuilder(index);
       }
@@ -22051,11 +22484,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
+      @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getActivePeriodOrBuilder(
           int index) {
         if (activePeriodBuilder_ == null) {
           return activePeriod_.get(index);  } else {
@@ -22067,11 +22501,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
            getActivePeriodOrBuilderList() {
         if (activePeriodBuilder_ != null) {
           return activePeriodBuilder_.getMessageOrBuilderList();
@@ -22084,11 +22519,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addActivePeriodBuilder() {
+      @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addActivePeriodBuilder() {
         return internalGetActivePeriodFieldBuilder().addBuilder(
             com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
       }
@@ -22097,11 +22533,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addActivePeriodBuilder(
+      @java.lang.Deprecated public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addActivePeriodBuilder(
           int index) {
         return internalGetActivePeriodFieldBuilder().addBuilder(
             index, com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
@@ -22111,11 +22548,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * Time when the alert should be shown to the user. If missing, the
        * alert will be shown as long as it appears in the feed.
        * If multiple ranges are given, the alert will be shown during all of them.
+       * Should not be used - for backwards-compatibility only.
        * </pre>
        *
-       * <code>repeated .transit_realtime.TimeRange active_period = 1;</code>
+       * <code>repeated .transit_realtime.TimeRange active_period = 1 [deprecated = true];</code>
        */
-      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange.Builder> 
+      @java.lang.Deprecated public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange.Builder> 
            getActivePeriodBuilderList() {
         return internalGetActivePeriodFieldBuilder().getBuilderList();
       }
@@ -22134,12 +22572,708 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         return activePeriodBuilder_;
       }
 
+      private java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> communicationPeriod_ =
+        java.util.Collections.emptyList();
+      private void ensureCommunicationPeriodIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          communicationPeriod_ = new java.util.ArrayList<com.google.transit.realtime.GtfsRealtime.TimeRange>(communicationPeriod_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> communicationPeriodBuilder_;
+
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getCommunicationPeriodList() {
+        if (communicationPeriodBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(communicationPeriod_);
+        } else {
+          return communicationPeriodBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public int getCommunicationPeriodCount() {
+        if (communicationPeriodBuilder_ == null) {
+          return communicationPeriod_.size();
+        } else {
+          return communicationPeriodBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange getCommunicationPeriod(int index) {
+        if (communicationPeriodBuilder_ == null) {
+          return communicationPeriod_.get(index);
+        } else {
+          return communicationPeriodBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder setCommunicationPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (communicationPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.set(index, value);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder setCommunicationPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (communicationPeriodBuilder_ == null) {
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder addCommunicationPeriod(com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (communicationPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.add(value);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder addCommunicationPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (communicationPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.add(index, value);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder addCommunicationPeriod(
+          com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (communicationPeriodBuilder_ == null) {
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.add(builderForValue.build());
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder addCommunicationPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (communicationPeriodBuilder_ == null) {
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder addAllCommunicationPeriod(
+          java.lang.Iterable<? extends com.google.transit.realtime.GtfsRealtime.TimeRange> values) {
+        if (communicationPeriodBuilder_ == null) {
+          ensureCommunicationPeriodIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, communicationPeriod_);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder clearCommunicationPeriod() {
+        if (communicationPeriodBuilder_ == null) {
+          communicationPeriod_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public Builder removeCommunicationPeriod(int index) {
+        if (communicationPeriodBuilder_ == null) {
+          ensureCommunicationPeriodIsMutable();
+          communicationPeriod_.remove(index);
+          onChanged();
+        } else {
+          communicationPeriodBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder getCommunicationPeriodBuilder(
+          int index) {
+        return internalGetCommunicationPeriodFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getCommunicationPeriodOrBuilder(
+          int index) {
+        if (communicationPeriodBuilder_ == null) {
+          return communicationPeriod_.get(index);  } else {
+          return communicationPeriodBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+           getCommunicationPeriodOrBuilderList() {
+        if (communicationPeriodBuilder_ != null) {
+          return communicationPeriodBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(communicationPeriod_);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addCommunicationPeriodBuilder() {
+        return internalGetCommunicationPeriodFieldBuilder().addBuilder(
+            com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addCommunicationPeriodBuilder(
+          int index) {
+        return internalGetCommunicationPeriodFieldBuilder().addBuilder(
+            index, com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Time when the alert should be shown to the user strictly for informative reasons.
+       * If missing, the consuming application can decide when it's appropriate to be shown.
+       * If multiple ranges are given, the alert will be shown during all of them.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange communication_period = 2;</code>
+       */
+      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange.Builder> 
+           getCommunicationPeriodBuilderList() {
+        return internalGetCommunicationPeriodFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+          internalGetCommunicationPeriodFieldBuilder() {
+        if (communicationPeriodBuilder_ == null) {
+          communicationPeriodBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder>(
+                  communicationPeriod_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          communicationPeriod_ = null;
+        }
+        return communicationPeriodBuilder_;
+      }
+
+      private java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> impactPeriod_ =
+        java.util.Collections.emptyList();
+      private void ensureImpactPeriodIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          impactPeriod_ = new java.util.ArrayList<com.google.transit.realtime.GtfsRealtime.TimeRange>(impactPeriod_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> impactPeriodBuilder_;
+
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange> getImpactPeriodList() {
+        if (impactPeriodBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(impactPeriod_);
+        } else {
+          return impactPeriodBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public int getImpactPeriodCount() {
+        if (impactPeriodBuilder_ == null) {
+          return impactPeriod_.size();
+        } else {
+          return impactPeriodBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange getImpactPeriod(int index) {
+        if (impactPeriodBuilder_ == null) {
+          return impactPeriod_.get(index);
+        } else {
+          return impactPeriodBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder setImpactPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (impactPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.set(index, value);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder setImpactPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (impactPeriodBuilder_ == null) {
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          impactPeriodBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder addImpactPeriod(com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (impactPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.add(value);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder addImpactPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange value) {
+        if (impactPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.add(index, value);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder addImpactPeriod(
+          com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (impactPeriodBuilder_ == null) {
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.add(builderForValue.build());
+          onChanged();
+        } else {
+          impactPeriodBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder addImpactPeriod(
+          int index, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder builderForValue) {
+        if (impactPeriodBuilder_ == null) {
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          impactPeriodBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder addAllImpactPeriod(
+          java.lang.Iterable<? extends com.google.transit.realtime.GtfsRealtime.TimeRange> values) {
+        if (impactPeriodBuilder_ == null) {
+          ensureImpactPeriodIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, impactPeriod_);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder clearImpactPeriod() {
+        if (impactPeriodBuilder_ == null) {
+          impactPeriod_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public Builder removeImpactPeriod(int index) {
+        if (impactPeriodBuilder_ == null) {
+          ensureImpactPeriodIsMutable();
+          impactPeriod_.remove(index);
+          onChanged();
+        } else {
+          impactPeriodBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder getImpactPeriodBuilder(
+          int index) {
+        return internalGetImpactPeriodFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder getImpactPeriodOrBuilder(
+          int index) {
+        if (impactPeriodBuilder_ == null) {
+          return impactPeriod_.get(index);  } else {
+          return impactPeriodBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public java.util.List<? extends com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+           getImpactPeriodOrBuilderList() {
+        if (impactPeriodBuilder_ != null) {
+          return impactPeriodBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(impactPeriod_);
+        }
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addImpactPeriodBuilder() {
+        return internalGetImpactPeriodFieldBuilder().addBuilder(
+            com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public com.google.transit.realtime.GtfsRealtime.TimeRange.Builder addImpactPeriodBuilder(
+          int index) {
+        return internalGetImpactPeriodFieldBuilder().addBuilder(
+            index, com.google.transit.realtime.GtfsRealtime.TimeRange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Time when the services are affected by the alert. If communication_period is specified,
+       * every time interval in impact_period must be fully contained within at least
+       * one time interval of communication_period.
+       * </pre>
+       *
+       * <code>repeated .transit_realtime.TimeRange impact_period = 3;</code>
+       */
+      public java.util.List<com.google.transit.realtime.GtfsRealtime.TimeRange.Builder> 
+           getImpactPeriodBuilderList() {
+        return internalGetImpactPeriodFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder> 
+          internalGetImpactPeriodFieldBuilder() {
+        if (impactPeriodBuilder_ == null) {
+          impactPeriodBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.google.transit.realtime.GtfsRealtime.TimeRange, com.google.transit.realtime.GtfsRealtime.TimeRange.Builder, com.google.transit.realtime.GtfsRealtime.TimeRangeOrBuilder>(
+                  impactPeriod_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          impactPeriod_ = null;
+        }
+        return impactPeriodBuilder_;
+      }
+
       private java.util.List<com.google.transit.realtime.GtfsRealtime.EntitySelector> informedEntity_ =
         java.util.Collections.emptyList();
       private void ensureInformedEntityIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           informedEntity_ = new java.util.ArrayList<com.google.transit.realtime.GtfsRealtime.EntitySelector>(informedEntity_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -22333,7 +23467,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       public Builder clearInformedEntity() {
         if (informedEntityBuilder_ == null) {
           informedEntity_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           informedEntityBuilder_.clear();
@@ -22438,7 +23572,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           informedEntityBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.google.transit.realtime.GtfsRealtime.EntitySelector, com.google.transit.realtime.GtfsRealtime.EntitySelector.Builder, com.google.transit.realtime.GtfsRealtime.EntitySelectorOrBuilder>(
                   informedEntity_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           informedEntity_ = null;
@@ -22452,7 +23586,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the cause field is set.
        */
       @java.lang.Override public boolean hasCause() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional .transit_realtime.Alert.Cause cause = 6 [default = UNKNOWN_CAUSE];</code>
@@ -22470,7 +23604,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder setCause(com.google.transit.realtime.GtfsRealtime.Alert.Cause value) {
         if (value == null) { throw new NullPointerException(); }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000010;
         cause_ = value.getNumber();
         onChanged();
         return this;
@@ -22480,7 +23614,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return This builder for chaining.
        */
       public Builder clearCause() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         cause_ = 1;
         onChanged();
         return this;
@@ -22492,7 +23626,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the effect field is set.
        */
       @java.lang.Override public boolean hasEffect() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional .transit_realtime.Alert.Effect effect = 7 [default = UNKNOWN_EFFECT];</code>
@@ -22510,7 +23644,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder setEffect(com.google.transit.realtime.GtfsRealtime.Alert.Effect value) {
         if (value == null) { throw new NullPointerException(); }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000020;
         effect_ = value.getNumber();
         onChanged();
         return this;
@@ -22520,7 +23654,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return This builder for chaining.
        */
       public Builder clearEffect() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
         effect_ = 8;
         onChanged();
         return this;
@@ -22538,7 +23672,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the url field is set.
        */
       public boolean hasUrl() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -22571,7 +23705,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           urlBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -22589,7 +23723,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           urlBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -22602,7 +23736,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeUrl(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (urlBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000040) != 0) &&
             url_ != null &&
             url_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getUrlBuilder().mergeFrom(value);
@@ -22613,7 +23747,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           urlBuilder_.mergeFrom(value);
         }
         if (url_ != null) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         return this;
@@ -22626,7 +23760,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString url = 8;</code>
        */
       public Builder clearUrl() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         url_ = null;
         if (urlBuilder_ != null) {
           urlBuilder_.dispose();
@@ -22643,7 +23777,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString url = 8;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getUrlBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         onChanged();
         return internalGetUrlFieldBuilder().getBuilder();
       }
@@ -22695,7 +23829,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the headerText field is set.
        */
       public boolean hasHeaderText() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -22728,7 +23862,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           headerTextBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -22746,7 +23880,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           headerTextBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -22759,7 +23893,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeHeaderText(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (headerTextBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000080) != 0) &&
             headerText_ != null &&
             headerText_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getHeaderTextBuilder().mergeFrom(value);
@@ -22770,7 +23904,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           headerTextBuilder_.mergeFrom(value);
         }
         if (headerText_ != null) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         return this;
@@ -22783,7 +23917,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString header_text = 10;</code>
        */
       public Builder clearHeaderText() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         headerText_ = null;
         if (headerTextBuilder_ != null) {
           headerTextBuilder_.dispose();
@@ -22800,7 +23934,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString header_text = 10;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getHeaderTextBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
         return internalGetHeaderTextFieldBuilder().getBuilder();
       }
@@ -22853,7 +23987,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the descriptionText field is set.
        */
       public boolean hasDescriptionText() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -22888,7 +24022,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           descriptionTextBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -22907,7 +24041,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           descriptionTextBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -22921,7 +24055,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeDescriptionText(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (descriptionTextBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
+          if (((bitField0_ & 0x00000100) != 0) &&
             descriptionText_ != null &&
             descriptionText_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getDescriptionTextBuilder().mergeFrom(value);
@@ -22932,7 +24066,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           descriptionTextBuilder_.mergeFrom(value);
         }
         if (descriptionText_ != null) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         return this;
@@ -22946,7 +24080,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString description_text = 11;</code>
        */
       public Builder clearDescriptionText() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         descriptionText_ = null;
         if (descriptionTextBuilder_ != null) {
           descriptionTextBuilder_.dispose();
@@ -22964,7 +24098,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString description_text = 11;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getDescriptionTextBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
         return internalGetDescriptionTextFieldBuilder().getBuilder();
       }
@@ -23018,7 +24152,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the ttsHeaderText field is set.
        */
       public boolean hasTtsHeaderText() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -23051,7 +24185,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           ttsHeaderTextBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -23069,7 +24203,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           ttsHeaderTextBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -23082,7 +24216,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeTtsHeaderText(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (ttsHeaderTextBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
+          if (((bitField0_ & 0x00000200) != 0) &&
             ttsHeaderText_ != null &&
             ttsHeaderText_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getTtsHeaderTextBuilder().mergeFrom(value);
@@ -23093,7 +24227,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           ttsHeaderTextBuilder_.mergeFrom(value);
         }
         if (ttsHeaderText_ != null) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         return this;
@@ -23106,7 +24240,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString tts_header_text = 12;</code>
        */
       public Builder clearTtsHeaderText() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         ttsHeaderText_ = null;
         if (ttsHeaderTextBuilder_ != null) {
           ttsHeaderTextBuilder_.dispose();
@@ -23123,7 +24257,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString tts_header_text = 12;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getTtsHeaderTextBuilder() {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
         return internalGetTtsHeaderTextFieldBuilder().getBuilder();
       }
@@ -23175,7 +24309,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the ttsDescriptionText field is set.
        */
       public boolean hasTtsDescriptionText() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -23208,7 +24342,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           ttsDescriptionTextBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -23226,7 +24360,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           ttsDescriptionTextBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -23239,7 +24373,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeTtsDescriptionText(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (ttsDescriptionTextBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
+          if (((bitField0_ & 0x00000400) != 0) &&
             ttsDescriptionText_ != null &&
             ttsDescriptionText_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getTtsDescriptionTextBuilder().mergeFrom(value);
@@ -23250,7 +24384,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           ttsDescriptionTextBuilder_.mergeFrom(value);
         }
         if (ttsDescriptionText_ != null) {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         return this;
@@ -23263,7 +24397,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString tts_description_text = 13;</code>
        */
       public Builder clearTtsDescriptionText() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000400);
         ttsDescriptionText_ = null;
         if (ttsDescriptionTextBuilder_ != null) {
           ttsDescriptionTextBuilder_.dispose();
@@ -23280,7 +24414,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString tts_description_text = 13;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getTtsDescriptionTextBuilder() {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         onChanged();
         return internalGetTtsDescriptionTextFieldBuilder().getBuilder();
       }
@@ -23326,7 +24460,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the severityLevel field is set.
        */
       @java.lang.Override public boolean hasSeverityLevel() {
-        return ((bitField0_ & 0x00000200) != 0);
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>optional .transit_realtime.Alert.SeverityLevel severity_level = 14 [default = UNKNOWN_SEVERITY];</code>
@@ -23344,7 +24478,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder setSeverityLevel(com.google.transit.realtime.GtfsRealtime.Alert.SeverityLevel value) {
         if (value == null) { throw new NullPointerException(); }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000800;
         severityLevel_ = value.getNumber();
         onChanged();
         return this;
@@ -23354,7 +24488,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return This builder for chaining.
        */
       public Builder clearSeverityLevel() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000800);
         severityLevel_ = 1;
         onChanged();
         return this;
@@ -23367,20 +24501,18 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
        * @return Whether the image field is set.
        */
       public boolean hasImage() {
-        return ((bitField0_ & 0x00000400) != 0);
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -23397,7 +24529,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -23411,7 +24542,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           imageBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -23419,7 +24550,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -23431,7 +24561,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           imageBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -23439,14 +24569,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
        */
       public Builder mergeImage(com.google.transit.realtime.GtfsRealtime.TranslatedImage value) {
         if (imageBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) != 0) &&
+          if (((bitField0_ & 0x00001000) != 0) &&
             image_ != null &&
             image_ != com.google.transit.realtime.GtfsRealtime.TranslatedImage.getDefaultInstance()) {
             getImageBuilder().mergeFrom(value);
@@ -23457,7 +24586,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           imageBuilder_.mergeFrom(value);
         }
         if (image_ != null) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         return this;
@@ -23466,13 +24595,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         image_ = null;
         if (imageBuilder_ != null) {
           imageBuilder_.dispose();
@@ -23485,13 +24613,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedImage.Builder getImageBuilder() {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00001000;
         onChanged();
         return internalGetImageFieldBuilder().getBuilder();
       }
@@ -23499,7 +24626,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -23516,7 +24642,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * TranslatedImage to be displayed along the alert text. Used to explain visually the alert effect of a detour, station closure, etc. The image must enhance the understanding of the alert. Any essential information communicated within the image must also be contained in the alert text.
        * The following types of images are discouraged : image containing mainly text, marketing or branded images that add no additional information. 
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedImage image = 15;</code>
@@ -23542,20 +24667,18 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
        * @return Whether the imageAlternativeText field is set.
        */
       public boolean hasImageAlternativeText() {
-        return ((bitField0_ & 0x00000800) != 0);
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -23572,7 +24695,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -23586,7 +24708,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           imageAlternativeTextBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -23594,7 +24716,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -23606,7 +24727,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           imageAlternativeTextBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -23614,14 +24735,13 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
        */
       public Builder mergeImageAlternativeText(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (imageAlternativeTextBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) != 0) &&
+          if (((bitField0_ & 0x00002000) != 0) &&
             imageAlternativeText_ != null &&
             imageAlternativeText_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getImageAlternativeTextBuilder().mergeFrom(value);
@@ -23632,7 +24752,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           imageAlternativeTextBuilder_.mergeFrom(value);
         }
         if (imageAlternativeText_ != null) {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         return this;
@@ -23641,13 +24761,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
        */
       public Builder clearImageAlternativeText() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00002000);
         imageAlternativeText_ = null;
         if (imageAlternativeTextBuilder_ != null) {
           imageAlternativeTextBuilder_.dispose();
@@ -23660,13 +24779,12 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getImageAlternativeTextBuilder() {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00002000;
         onChanged();
         return internalGetImageAlternativeTextFieldBuilder().getBuilder();
       }
@@ -23674,7 +24792,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -23691,7 +24808,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <pre>
        * Text describing the appearance of the linked image in the `image` field (e.g., in case the image can't be displayed
        * or the user can't see the image for accessibility reasons). See the HTML spec for alt image text - https://html.spec.whatwg.org/#alt.
-       * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
        * </pre>
        *
        * <code>optional .transit_realtime.TranslatedString image_alternative_text = 16;</code>
@@ -23723,7 +24839,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the causeDetail field is set.
        */
       public boolean hasCauseDetail() {
-        return ((bitField0_ & 0x00001000) != 0);
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -23758,7 +24874,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           causeDetailBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -23777,7 +24893,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           causeDetailBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -23791,7 +24907,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeCauseDetail(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (causeDetailBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) != 0) &&
+          if (((bitField0_ & 0x00004000) != 0) &&
             causeDetail_ != null &&
             causeDetail_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getCauseDetailBuilder().mergeFrom(value);
@@ -23802,7 +24918,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           causeDetailBuilder_.mergeFrom(value);
         }
         if (causeDetail_ != null) {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00004000;
           onChanged();
         }
         return this;
@@ -23816,7 +24932,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString cause_detail = 17;</code>
        */
       public Builder clearCauseDetail() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         causeDetail_ = null;
         if (causeDetailBuilder_ != null) {
           causeDetailBuilder_.dispose();
@@ -23834,7 +24950,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString cause_detail = 17;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getCauseDetailBuilder() {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return internalGetCauseDetailFieldBuilder().getBuilder();
       }
@@ -23889,7 +25005,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * @return Whether the effectDetail field is set.
        */
       public boolean hasEffectDetail() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <pre>
@@ -23924,7 +25040,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           effectDetailBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -23943,7 +25059,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
         } else {
           effectDetailBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -23957,7 +25073,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        */
       public Builder mergeEffectDetail(com.google.transit.realtime.GtfsRealtime.TranslatedString value) {
         if (effectDetailBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) != 0) &&
+          if (((bitField0_ & 0x00008000) != 0) &&
             effectDetail_ != null &&
             effectDetail_ != com.google.transit.realtime.GtfsRealtime.TranslatedString.getDefaultInstance()) {
             getEffectDetailBuilder().mergeFrom(value);
@@ -23968,7 +25084,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
           effectDetailBuilder_.mergeFrom(value);
         }
         if (effectDetail_ != null) {
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         return this;
@@ -23982,7 +25098,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString effect_detail = 18;</code>
        */
       public Builder clearEffectDetail() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         effectDetail_ = null;
         if (effectDetailBuilder_ != null) {
           effectDetailBuilder_.dispose();
@@ -24000,7 +25116,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
        * <code>optional .transit_realtime.TranslatedString effect_detail = 18;</code>
        */
       public com.google.transit.realtime.GtfsRealtime.TranslatedString.Builder getEffectDetailBuilder() {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return internalGetEffectDetailFieldBuilder().getBuilder();
       }
@@ -34568,7 +35684,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
    * translation, the first matching translation is picked.
    * 3. If some translation has an unspecified language code, that translation is
    * picked.
-   * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
    * </pre>
    *
    * Protobuf type {@code transit_realtime.TranslatedImage}
@@ -36042,7 +37157,6 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
      * translation, the first matching translation is picked.
      * 3. If some translation has an unspecified language code, that translation is
      * picked.
-     * NOTE: This field is still experimental, and subject to change. It may be formally adopted in the future.
      * </pre>
      *
      * Protobuf type {@code transit_realtime.TranslatedImage}
@@ -47426,119 +48540,122 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
       "_ONLY\020\003\022\036\n\032CRUSHED_STANDING_ROOM_ONLY\020\004\022" +
       "\010\n\004FULL\020\005\022\034\n\030NOT_ACCEPTING_PASSENGERS\020\006\022" +
       "\025\n\021NO_DATA_AVAILABLE\020\007\022\021\n\rNOT_BOARDABLE\020" +
-      "\010*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\376\n\n\005Alert\0222\n\ractive_pe" +
-      "riod\030\001 \003(\0132\033.transit_realtime.TimeRange\022" +
-      "9\n\017informed_entity\030\005 \003(\0132 .transit_realt" +
-      "ime.EntitySelector\022;\n\005cause\030\006 \001(\0162\035.tran" +
-      "sit_realtime.Alert.Cause:\rUNKNOWN_CAUSE\022" +
-      ">\n\006effect\030\007 \001(\0162\036.transit_realtime.Alert" +
-      ".Effect:\016UNKNOWN_EFFECT\022/\n\003url\030\010 \001(\0132\".t" +
-      "ransit_realtime.TranslatedString\0227\n\013head" +
-      "er_text\030\n \001(\0132\".transit_realtime.Transla" +
-      "tedString\022<\n\020description_text\030\013 \001(\0132\".tr" +
-      "ansit_realtime.TranslatedString\022;\n\017tts_h" +
-      "eader_text\030\014 \001(\0132\".transit_realtime.Tran" +
-      "slatedString\022@\n\024tts_description_text\030\r \001" +
-      "(\0132\".transit_realtime.TranslatedString\022O" +
-      "\n\016severity_level\030\016 \001(\0162%.transit_realtim" +
-      "e.Alert.SeverityLevel:\020UNKNOWN_SEVERITY\022" +
-      "0\n\005image\030\017 \001(\0132!.transit_realtime.Transl" +
-      "atedImage\022B\n\026image_alternative_text\030\020 \001(" +
-      "\0132\".transit_realtime.TranslatedString\0228\n" +
-      "\014cause_detail\030\021 \001(\0132\".transit_realtime.T" +
-      "ranslatedString\0229\n\reffect_detail\030\022 \001(\0132\"" +
-      ".transit_realtime.TranslatedString\"\353\001\n\005C" +
-      "ause\022\021\n\rUNKNOWN_CAUSE\020\001\022\017\n\013OTHER_CAUSE\020\002" +
-      "\022\025\n\021TECHNICAL_PROBLEM\020\003\022\n\n\006STRIKE\020\004\022\021\n\rD" +
-      "EMONSTRATION\020\005\022\014\n\010ACCIDENT\020\006\022\013\n\007HOLIDAY\020" +
-      "\007\022\013\n\007WEATHER\020\010\022\017\n\013MAINTENANCE\020\t\022\020\n\014CONST" +
-      "RUCTION\020\n\022\023\n\017POLICE_ACTIVITY\020\013\022\025\n\021MEDICA" +
-      "L_EMERGENCY\020\014\022\021\n\rSPECIAL_EVENT\020\r\"\335\001\n\006Eff" +
-      "ect\022\016\n\nNO_SERVICE\020\001\022\023\n\017REDUCED_SERVICE\020\002" +
-      "\022\026\n\022SIGNIFICANT_DELAYS\020\003\022\n\n\006DETOUR\020\004\022\026\n\022" +
-      "ADDITIONAL_SERVICE\020\005\022\024\n\020MODIFIED_SERVICE" +
-      "\020\006\022\020\n\014OTHER_EFFECT\020\007\022\022\n\016UNKNOWN_EFFECT\020\010" +
-      "\022\016\n\nSTOP_MOVED\020\t\022\r\n\tNO_EFFECT\020\n\022\027\n\023ACCES" +
-      "SIBILITY_ISSUE\020\013\"H\n\rSeverityLevel\022\024\n\020UNK" +
-      "NOWN_SEVERITY\020\001\022\010\n\004INFO\020\002\022\013\n\007WARNING\020\003\022\n" +
-      "\n\006SEVERE\020\004*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"7\n\tTimeRange\022" +
-      "\r\n\005start\030\001 \001(\004\022\013\n\003end\030\002 \001(\004*\006\010\350\007\020\320\017*\006\010\250F" +
-      "\020\220N\"q\n\010Position\022\020\n\010latitude\030\001 \002(\002\022\021\n\tlon" +
-      "gitude\030\002 \002(\002\022\017\n\007bearing\030\003 \001(\002\022\020\n\010odomete" +
-      "r\030\004 \001(\001\022\r\n\005speed\030\005 \001(\002*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\267" +
-      "\004\n\016TripDescriptor\022\017\n\007trip_id\030\001 \001(\t\022\020\n\010ro" +
-      "ute_id\030\005 \001(\t\022\024\n\014direction_id\030\006 \001(\r\022\022\n\nst" +
-      "art_time\030\002 \001(\t\022\022\n\nstart_date\030\003 \001(\t\022T\n\025sc" +
-      "hedule_relationship\030\004 \001(\01625.transit_real" +
-      "time.TripDescriptor.ScheduleRelationship" +
-      "\022L\n\rmodified_trip\030\007 \001(\01325.transit_realti" +
-      "me.TripDescriptor.ModifiedTripSelector\032\202" +
-      "\001\n\024ModifiedTripSelector\022\030\n\020modifications" +
-      "_id\030\001 \001(\t\022\030\n\020affected_trip_id\030\002 \001(\t\022\022\n\ns" +
-      "tart_time\030\003 \001(\t\022\022\n\nstart_date\030\004 \001(\t*\006\010\350\007" +
-      "\020\320\017*\006\010\250F\020\220N\"\212\001\n\024ScheduleRelationship\022\r\n\t" +
-      "SCHEDULED\020\000\022\r\n\005ADDED\020\001\032\002\010\001\022\017\n\013UNSCHEDULE" +
-      "D\020\002\022\014\n\010CANCELED\020\003\022\017\n\013REPLACEMENT\020\005\022\016\n\nDU" +
-      "PLICATED\020\006\022\013\n\007DELETED\020\007\022\007\n\003NEW\020\010*\006\010\350\007\020\320\017" +
-      "*\006\010\250F\020\220N\"\243\002\n\021VehicleDescriptor\022\n\n\002id\030\001 \001" +
-      "(\t\022\r\n\005label\030\002 \001(\t\022\025\n\rlicense_plate\030\003 \001(\t" +
-      "\022a\n\025wheelchair_accessible\030\004 \001(\01628.transi" +
-      "t_realtime.VehicleDescriptor.WheelchairA" +
-      "ccessible:\010NO_VALUE\"i\n\024WheelchairAccessi" +
-      "ble\022\014\n\010NO_VALUE\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025WHEELC" +
-      "HAIR_ACCESSIBLE\020\002\022\033\n\027WHEELCHAIR_INACCESS" +
-      "IBLE\020\003*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\260\001\n\016EntitySelecto" +
-      "r\022\021\n\tagency_id\030\001 \001(\t\022\020\n\010route_id\030\002 \001(\t\022\022" +
-      "\n\nroute_type\030\003 \001(\005\022.\n\004trip\030\004 \001(\0132 .trans" +
-      "it_realtime.TripDescriptor\022\017\n\007stop_id\030\005 " +
-      "\001(\t\022\024\n\014direction_id\030\006 \001(\r*\006\010\350\007\020\320\017*\006\010\250F\020\220" +
-      "N\"\246\001\n\020TranslatedString\022C\n\013translation\030\001 " +
-      "\003(\0132..transit_realtime.TranslatedString." +
-      "Translation\032=\n\013Translation\022\014\n\004text\030\001 \002(\t" +
-      "\022\020\n\010language\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350\007\020" +
-      "\320\017*\006\010\250F\020\220N\"\301\001\n\017TranslatedImage\022I\n\017locali" +
-      "zed_image\030\001 \003(\01320.transit_realtime.Trans" +
-      "latedImage.LocalizedImage\032S\n\016LocalizedIm" +
-      "age\022\013\n\003url\030\001 \002(\t\022\022\n\nmedia_type\030\002 \002(\t\022\020\n\010" +
-      "language\030\003 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350\007\020\320\017*\006" +
-      "\010\250F\020\220N\"C\n\005Shape\022\020\n\010shape_id\030\001 \001(\t\022\030\n\020enc" +
-      "oded_polyline\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\204\005\n\004" +
-      "Stop\022\017\n\007stop_id\030\001 \001(\t\0225\n\tstop_code\030\002 \001(\013" +
-      "2\".transit_realtime.TranslatedString\0225\n\t" +
-      "stop_name\030\003 \001(\0132\".transit_realtime.Trans" +
-      "latedString\0229\n\rtts_stop_name\030\004 \001(\0132\".tra" +
-      "nsit_realtime.TranslatedString\0225\n\tstop_d" +
-      "esc\030\005 \001(\0132\".transit_realtime.TranslatedS" +
-      "tring\022\020\n\010stop_lat\030\006 \001(\002\022\020\n\010stop_lon\030\007 \001(" +
-      "\002\022\017\n\007zone_id\030\010 \001(\t\0224\n\010stop_url\030\t \001(\0132\".t" +
-      "ransit_realtime.TranslatedString\022\026\n\016pare" +
-      "nt_station\030\013 \001(\t\022\025\n\rstop_timezone\030\014 \001(\t\022" +
-      "O\n\023wheelchair_boarding\030\r \001(\0162).transit_r" +
-      "ealtime.Stop.WheelchairBoarding:\007UNKNOWN" +
-      "\022\020\n\010level_id\030\016 \001(\t\0229\n\rplatform_code\030\017 \001(" +
-      "\0132\".transit_realtime.TranslatedString\"C\n" +
-      "\022WheelchairBoarding\022\013\n\007UNKNOWN\020\000\022\r\n\tAVAI" +
-      "LABLE\020\001\022\021\n\rNOT_AVAILABLE\020\002*\006\010\350\007\020\320\017*\006\010\250F\020" +
-      "\220N\"\337\004\n\021TripModifications\022I\n\016selected_tri" +
-      "ps\030\001 \003(\01321.transit_realtime.TripModifica" +
-      "tions.SelectedTrips\022\023\n\013start_times\030\002 \003(\t" +
-      "\022\025\n\rservice_dates\030\003 \003(\t\022G\n\rmodifications" +
-      "\030\004 \003(\01320.transit_realtime.TripModificati" +
-      "ons.Modification\032\264\002\n\014Modification\022;\n\023sta" +
-      "rt_stop_selector\030\001 \001(\0132\036.transit_realtim" +
-      "e.StopSelector\0229\n\021end_stop_selector\030\002 \001(" +
-      "\0132\036.transit_realtime.StopSelector\022(\n\035pro" +
-      "pagated_modification_delay\030\003 \001(\005:\0010\022<\n\021r" +
-      "eplacement_stops\030\004 \003(\0132!.transit_realtim" +
-      "e.ReplacementStop\022\030\n\020service_alert_id\030\005 " +
-      "\001(\t\022\032\n\022last_modified_time\030\006 \001(\004*\006\010\350\007\020\320\017*" +
-      "\006\010\250F\020\220N\032C\n\rSelectedTrips\022\020\n\010trip_ids\030\001 \003" +
-      "(\t\022\020\n\010shape_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350" +
-      "\007\020\320\017*\006\010\250F\020\220N\"F\n\014StopSelector\022\025\n\rstop_seq" +
-      "uence\030\001 \001(\r\022\017\n\007stop_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250" +
-      "F\020\220N\"O\n\017ReplacementStop\022\033\n\023travel_time_t" +
-      "o_stop\030\001 \001(\005\022\017\n\007stop_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010" +
-      "\250F\020\220NB\035\n\033com.google.transit.realtime"
+      "\010*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\361\013\n\005Alert\0226\n\ractive_pe" +
+      "riod\030\001 \003(\0132\033.transit_realtime.TimeRangeB" +
+      "\002\030\001\0229\n\024communication_period\030\002 \003(\0132\033.tran" +
+      "sit_realtime.TimeRange\0222\n\rimpact_period\030" +
+      "\003 \003(\0132\033.transit_realtime.TimeRange\0229\n\017in" +
+      "formed_entity\030\005 \003(\0132 .transit_realtime.E" +
+      "ntitySelector\022;\n\005cause\030\006 \001(\0162\035.transit_r" +
+      "ealtime.Alert.Cause:\rUNKNOWN_CAUSE\022>\n\006ef" +
+      "fect\030\007 \001(\0162\036.transit_realtime.Alert.Effe" +
+      "ct:\016UNKNOWN_EFFECT\022/\n\003url\030\010 \001(\0132\".transi" +
+      "t_realtime.TranslatedString\0227\n\013header_te" +
+      "xt\030\n \001(\0132\".transit_realtime.TranslatedSt" +
+      "ring\022<\n\020description_text\030\013 \001(\0132\".transit" +
+      "_realtime.TranslatedString\022;\n\017tts_header" +
+      "_text\030\014 \001(\0132\".transit_realtime.Translate" +
+      "dString\022@\n\024tts_description_text\030\r \001(\0132\"." +
+      "transit_realtime.TranslatedString\022O\n\016sev" +
+      "erity_level\030\016 \001(\0162%.transit_realtime.Ale" +
+      "rt.SeverityLevel:\020UNKNOWN_SEVERITY\0220\n\005im" +
+      "age\030\017 \001(\0132!.transit_realtime.TranslatedI" +
+      "mage\022B\n\026image_alternative_text\030\020 \001(\0132\".t" +
+      "ransit_realtime.TranslatedString\0228\n\014caus" +
+      "e_detail\030\021 \001(\0132\".transit_realtime.Transl" +
+      "atedString\0229\n\reffect_detail\030\022 \001(\0132\".tran" +
+      "sit_realtime.TranslatedString\"\353\001\n\005Cause\022" +
+      "\021\n\rUNKNOWN_CAUSE\020\001\022\017\n\013OTHER_CAUSE\020\002\022\025\n\021T" +
+      "ECHNICAL_PROBLEM\020\003\022\n\n\006STRIKE\020\004\022\021\n\rDEMONS" +
+      "TRATION\020\005\022\014\n\010ACCIDENT\020\006\022\013\n\007HOLIDAY\020\007\022\013\n\007" +
+      "WEATHER\020\010\022\017\n\013MAINTENANCE\020\t\022\020\n\014CONSTRUCTI" +
+      "ON\020\n\022\023\n\017POLICE_ACTIVITY\020\013\022\025\n\021MEDICAL_EME" +
+      "RGENCY\020\014\022\021\n\rSPECIAL_EVENT\020\r\"\335\001\n\006Effect\022\016" +
+      "\n\nNO_SERVICE\020\001\022\023\n\017REDUCED_SERVICE\020\002\022\026\n\022S" +
+      "IGNIFICANT_DELAYS\020\003\022\n\n\006DETOUR\020\004\022\026\n\022ADDIT" +
+      "IONAL_SERVICE\020\005\022\024\n\020MODIFIED_SERVICE\020\006\022\020\n" +
+      "\014OTHER_EFFECT\020\007\022\022\n\016UNKNOWN_EFFECT\020\010\022\016\n\nS" +
+      "TOP_MOVED\020\t\022\r\n\tNO_EFFECT\020\n\022\027\n\023ACCESSIBIL" +
+      "ITY_ISSUE\020\013\"H\n\rSeverityLevel\022\024\n\020UNKNOWN_" +
+      "SEVERITY\020\001\022\010\n\004INFO\020\002\022\013\n\007WARNING\020\003\022\n\n\006SEV" +
+      "ERE\020\004*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"7\n\tTimeRange\022\r\n\005st" +
+      "art\030\001 \001(\004\022\013\n\003end\030\002 \001(\004*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"q" +
+      "\n\010Position\022\020\n\010latitude\030\001 \002(\002\022\021\n\tlongitud" +
+      "e\030\002 \002(\002\022\017\n\007bearing\030\003 \001(\002\022\020\n\010odometer\030\004 \001" +
+      "(\001\022\r\n\005speed\030\005 \001(\002*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\267\004\n\016Tr" +
+      "ipDescriptor\022\017\n\007trip_id\030\001 \001(\t\022\020\n\010route_i" +
+      "d\030\005 \001(\t\022\024\n\014direction_id\030\006 \001(\r\022\022\n\nstart_t" +
+      "ime\030\002 \001(\t\022\022\n\nstart_date\030\003 \001(\t\022T\n\025schedul" +
+      "e_relationship\030\004 \001(\01625.transit_realtime." +
+      "TripDescriptor.ScheduleRelationship\022L\n\rm" +
+      "odified_trip\030\007 \001(\01325.transit_realtime.Tr" +
+      "ipDescriptor.ModifiedTripSelector\032\202\001\n\024Mo" +
+      "difiedTripSelector\022\030\n\020modifications_id\030\001" +
+      " \001(\t\022\030\n\020affected_trip_id\030\002 \001(\t\022\022\n\nstart_" +
+      "time\030\003 \001(\t\022\022\n\nstart_date\030\004 \001(\t*\006\010\350\007\020\320\017*\006" +
+      "\010\250F\020\220N\"\212\001\n\024ScheduleRelationship\022\r\n\tSCHED" +
+      "ULED\020\000\022\r\n\005ADDED\020\001\032\002\010\001\022\017\n\013UNSCHEDULED\020\002\022\014" +
+      "\n\010CANCELED\020\003\022\017\n\013REPLACEMENT\020\005\022\016\n\nDUPLICA" +
+      "TED\020\006\022\013\n\007DELETED\020\007\022\007\n\003NEW\020\010*\006\010\350\007\020\320\017*\006\010\250F" +
+      "\020\220N\"\243\002\n\021VehicleDescriptor\022\n\n\002id\030\001 \001(\t\022\r\n" +
+      "\005label\030\002 \001(\t\022\025\n\rlicense_plate\030\003 \001(\t\022a\n\025w" +
+      "heelchair_accessible\030\004 \001(\01628.transit_rea" +
+      "ltime.VehicleDescriptor.WheelchairAccess" +
+      "ible:\010NO_VALUE\"i\n\024WheelchairAccessible\022\014" +
+      "\n\010NO_VALUE\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025WHEELCHAIR_" +
+      "ACCESSIBLE\020\002\022\033\n\027WHEELCHAIR_INACCESSIBLE\020" +
+      "\003*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\260\001\n\016EntitySelector\022\021\n\t" +
+      "agency_id\030\001 \001(\t\022\020\n\010route_id\030\002 \001(\t\022\022\n\nrou" +
+      "te_type\030\003 \001(\005\022.\n\004trip\030\004 \001(\0132 .transit_re" +
+      "altime.TripDescriptor\022\017\n\007stop_id\030\005 \001(\t\022\024" +
+      "\n\014direction_id\030\006 \001(\r*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\246\001\n" +
+      "\020TranslatedString\022C\n\013translation\030\001 \003(\0132." +
+      ".transit_realtime.TranslatedString.Trans" +
+      "lation\032=\n\013Translation\022\014\n\004text\030\001 \002(\t\022\020\n\010l" +
+      "anguage\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350\007\020\320\017*\006\010" +
+      "\250F\020\220N\"\301\001\n\017TranslatedImage\022I\n\017localized_i" +
+      "mage\030\001 \003(\01320.transit_realtime.Translated" +
+      "Image.LocalizedImage\032S\n\016LocalizedImage\022\013" +
+      "\n\003url\030\001 \002(\t\022\022\n\nmedia_type\030\002 \002(\t\022\020\n\010langu" +
+      "age\030\003 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350\007\020\320\017*\006\010\250F\020\220" +
+      "N\"C\n\005Shape\022\020\n\010shape_id\030\001 \001(\t\022\030\n\020encoded_" +
+      "polyline\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\204\005\n\004Stop\022" +
+      "\017\n\007stop_id\030\001 \001(\t\0225\n\tstop_code\030\002 \001(\0132\".tr" +
+      "ansit_realtime.TranslatedString\0225\n\tstop_" +
+      "name\030\003 \001(\0132\".transit_realtime.Translated" +
+      "String\0229\n\rtts_stop_name\030\004 \001(\0132\".transit_" +
+      "realtime.TranslatedString\0225\n\tstop_desc\030\005" +
+      " \001(\0132\".transit_realtime.TranslatedString" +
+      "\022\020\n\010stop_lat\030\006 \001(\002\022\020\n\010stop_lon\030\007 \001(\002\022\017\n\007" +
+      "zone_id\030\010 \001(\t\0224\n\010stop_url\030\t \001(\0132\".transi" +
+      "t_realtime.TranslatedString\022\026\n\016parent_st" +
+      "ation\030\013 \001(\t\022\025\n\rstop_timezone\030\014 \001(\t\022O\n\023wh" +
+      "eelchair_boarding\030\r \001(\0162).transit_realti" +
+      "me.Stop.WheelchairBoarding:\007UNKNOWN\022\020\n\010l" +
+      "evel_id\030\016 \001(\t\0229\n\rplatform_code\030\017 \001(\0132\".t" +
+      "ransit_realtime.TranslatedString\"C\n\022Whee" +
+      "lchairBoarding\022\013\n\007UNKNOWN\020\000\022\r\n\tAVAILABLE" +
+      "\020\001\022\021\n\rNOT_AVAILABLE\020\002*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"\337\004" +
+      "\n\021TripModifications\022I\n\016selected_trips\030\001 " +
+      "\003(\01321.transit_realtime.TripModifications" +
+      ".SelectedTrips\022\023\n\013start_times\030\002 \003(\t\022\025\n\rs" +
+      "ervice_dates\030\003 \003(\t\022G\n\rmodifications\030\004 \003(" +
+      "\01320.transit_realtime.TripModifications.M" +
+      "odification\032\264\002\n\014Modification\022;\n\023start_st" +
+      "op_selector\030\001 \001(\0132\036.transit_realtime.Sto" +
+      "pSelector\0229\n\021end_stop_selector\030\002 \001(\0132\036.t" +
+      "ransit_realtime.StopSelector\022(\n\035propagat" +
+      "ed_modification_delay\030\003 \001(\005:\0010\022<\n\021replac" +
+      "ement_stops\030\004 \003(\0132!.transit_realtime.Rep" +
+      "lacementStop\022\030\n\020service_alert_id\030\005 \001(\t\022\032" +
+      "\n\022last_modified_time\030\006 \001(\004*\006\010\350\007\020\320\017*\006\010\250F\020" +
+      "\220N\032C\n\rSelectedTrips\022\020\n\010trip_ids\030\001 \003(\t\022\020\n" +
+      "\010shape_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N*\006\010\350\007\020\320\017*" +
+      "\006\010\250F\020\220N\"F\n\014StopSelector\022\025\n\rstop_sequence" +
+      "\030\001 \001(\r\022\017\n\007stop_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N\"" +
+      "O\n\017ReplacementStop\022\033\n\023travel_time_to_sto" +
+      "p\030\001 \001(\005\022\017\n\007stop_id\030\002 \001(\t*\006\010\350\007\020\320\017*\006\010\250F\020\220N" +
+      "B\035\n\033com.google.transit.realtime"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47609,7 +48726,7 @@ public final class GtfsRealtime extends com.google.protobuf.GeneratedFile {
     internal_static_transit_realtime_Alert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_transit_realtime_Alert_descriptor,
-        new java.lang.String[] { "ActivePeriod", "InformedEntity", "Cause", "Effect", "Url", "HeaderText", "DescriptionText", "TtsHeaderText", "TtsDescriptionText", "SeverityLevel", "Image", "ImageAlternativeText", "CauseDetail", "EffectDetail", });
+        new java.lang.String[] { "ActivePeriod", "CommunicationPeriod", "ImpactPeriod", "InformedEntity", "Cause", "Effect", "Url", "HeaderText", "DescriptionText", "TtsHeaderText", "TtsDescriptionText", "SeverityLevel", "Image", "ImageAlternativeText", "CauseDetail", "EffectDetail", });
     internal_static_transit_realtime_TimeRange_descriptor =
       getDescriptor().getMessageType(6);
     internal_static_transit_realtime_TimeRange_fieldAccessorTable = new
